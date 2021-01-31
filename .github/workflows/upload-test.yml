@@ -1,10 +1,20 @@
-name: '[DEMO] Upload Episode from YouTube To Anchor.Fm'
+name: 'Upload Episode from YouTube To Anchor.Fm'
 
-on:
-  push:
-    paths: 
-      - episode.json
-    branches: [master]
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Title'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'test'  
+
+# on:
+#  push:
+#    paths: 
+#      - episode.json
+#    branches: [main]
 
 jobs:
   upload_episode:

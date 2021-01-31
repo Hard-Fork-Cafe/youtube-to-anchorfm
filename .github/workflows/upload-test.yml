@@ -1,10 +1,10 @@
 name: 'Upload Episode from YouTube To Anchor.Fm'
 
- on:
+on:
   push:
     paths: 
       - episode.json
-    branches: [main]
+    branches: [master]
 
 jobs:
   upload_episode:
